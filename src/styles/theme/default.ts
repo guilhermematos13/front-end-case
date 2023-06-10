@@ -1,0 +1,33 @@
+export const defaultTheme = {
+  'primary-100': '#FFC299',
+  'primary-200': '#E5A173',
+  'primary-500': '#ED7D31',
+  'primary-600': '#CC7337',
+  'primary-700': '#B26530',
+  'primary-800': '#A65823',
+
+  'secondary-100': '#D9D9D9',
+  'secondary-200': '#D1D1D1',
+  'secondary-300': '#CCCCCC',
+  'secondary-500': '#BFBFBF',
+  'secondary-600': '#B3B3B3',
+  'secondary-700': '#A6A6A6',
+
+  'white': '#FFFFFF',
+  'grayscale-100': '#EEEEEE',
+  'grayscale-200': '#DDDDDD',
+  'grayscale-300': '#BBBBBB',
+  'grayscale-400': '#999999',
+  'grayscale-500': '#666666',
+  'grayscale-600': '#444444',
+  'grayscale-700': '#333333',
+  'grayscale-800': '#222222',
+  'grayscale-900': '#111111',
+
+  'system-blue': '#1A0DAB',
+  'system-dark-blue': '#1B1466',
+  'system-light-blue': '#2E82E5',
+  'system-red': '#1E986F',
+  'system-yellow': '#E5AC00',
+  'system-green': '#1E986F',
+} as const;
