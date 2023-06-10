@@ -7,9 +7,16 @@ export function Text({
   color,
   size = 'md',
   weight = 'normal',
+  textDecoration = 'none',
 }: HeadingProps) {
   return (
-    <TextStyled tag={tag} color={color} size={size} weight={weight}>
+    <TextStyled
+      tag={tag}
+      color={color}
+      size={size}
+      weight={weight}
+      textDecoration={textDecoration}
+    >
       {children}
     </TextStyled>
   );

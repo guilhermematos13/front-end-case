@@ -1,65 +1,83 @@
 import { useTheme } from 'styled-components';
-import {
-  AccessibilityContainer,
-  Container,
-  IconsContainer,
-  ValueContainer,
-  ValueTextContainer,
-} from './styles';
 import Logo from '../../assets/logo.svg';
+import AccessibilityIcon from '../../assets/iconAccessibility.svg';
+import {
+  LanguageContainer,
+  MenuContainer,
+  TopbarAccessibilityContainer,
+  TopbarBase,
+  TopbarContainer,
+  TopbarContent,
+  TopbarGraphContent,
+  TopbarGraphValue,
+} from './styles';
 import { Text } from '../Text';
-import iconGraph from '../../assets/iconGraph.svg';
-import iconAccessibility from '../../assets/iconAccessibility.svg';
-import usaFlag from '../../assets/usaFlag.svg';
-import { Bell, List, MagnifyingGlass } from '@phosphor-icons/react';
+import { Globe, TrendUp } from '@phosphor-icons/react';
 
 export function Header() {
   const colors = useTheme();
 
   return (
-    <Container>
-      <img src={Logo} alt="" />
-      <div>
-        <ValueContainer>
-          <ValueTextContainer>
-            <Text color={colors.white} size="lg" tag="p" weight="bold">
-              YDUQ3:
-            </Text>
-            <Text color={colors['primary-500']} size="lg" tag="p" weight="bold">
-              R$ 35,13
-            </Text>
-          </ValueTextContainer>
-          <ValueTextContainer>
-            <Text color={colors.white} size="lg" tag="p" weight="bold">
-              YDUQY:
-            </Text>
-            <Text color={colors['primary-500']} size="lg" tag="p" weight="bold">
-              R$ 35,13
-            </Text>
-          </ValueTextContainer>
-          <img src={iconGraph} alt="" />
-        </ValueContainer>
-      </div>
-      <div>
-        <AccessibilityContainer>
-          <Text color={colors['white']} size="lg" tag="p" weight="normal">
-            Acessibilidade:
+    <div>
+      <TopbarContainer>
+        <TopbarBase>
+          <Text color={colors.white} size="sm" weight="normal" tag="p">
+            Relações com Investidores | Institucional
           </Text>
-          <img src={iconAccessibility} />
-          <Text color={colors['white']} size="lg" tag="p" weight="normal">
-            A+
+          <Globe color={colors.white} />
+        </TopbarBase>
+
+        <TopbarContent>
+          <TrendUp color={colors.white} />
+          <TopbarGraphContent>
+            <Text color={colors.white} size="sm" weight="bold" tag="p">
+              PRISM4:
+            </Text>
+            <TopbarGraphValue>
+              <Text color={colors.white} size="sm" weight="normal" tag="p">
+                R$
+              </Text>
+              <Text color={colors.white} size="sm" weight="normal" tag="p">
+                4,55
+              </Text>
+              <Text color={colors.white} size="sm" weight="normal" tag="p">
+                +1.5%
+              </Text>
+            </TopbarGraphValue>
+          </TopbarGraphContent>
+        </TopbarContent>
+
+        <TopbarAccessibilityContainer>
+          <Text
+            color={colors.white}
+            size="sm"
+            weight="normal"
+            tag="p"
+            textDecoration="underline"
+          >
+            Acessibilidade
           </Text>
-          <Text color={colors['white']} size="lg" tag="p" weight="normal">
+          <img src={AccessibilityIcon} />
+          <Text color={colors.white} size="xs" weight="normal" tag="p">
             A-
           </Text>
-        </AccessibilityContainer>
-      </div>
-      <IconsContainer>
-        <img src={usaFlag} />
-        <Bell size={24} weight="bold" color={colors.white} />
-        <MagnifyingGlass weight="bold" color={colors.white} size={24} />
-        <List weight="bold" color={colors['primary-500']} size={24} />
-      </IconsContainer>
-    </Container>
+          <Text color={colors.white} size="sm" weight="normal" tag="p">
+            A+
+          </Text>
+          <LanguageContainer>
+            <Globe color={colors.white} />
+            <Text color={colors.white} size="sm" weight="bold" tag="p">
+              PT
+            </Text>
+            <Text color={colors.white} size="sm" weight="normal" tag="p">
+              | EN
+            </Text>
+          </LanguageContainer>
+        </TopbarAccessibilityContainer>
+      </TopbarContainer>
+      <MenuContainer>
+        <img src={Logo} alt="" />
+      </MenuContainer>
+    </div>
   );
 }

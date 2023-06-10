@@ -6,4 +6,5 @@ interface HeadingProps {
   children: ReactNode;
   color: string;
   weight: 'bold' | 'normal';
+  textDecoration?: 'none' | 'underline';
 }

@@ -1,31 +1,57 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const TopbarContainer = styled.div`
   width: 100%;
-  padding: 24px 75px;
-  background-color: ${(props) => props.theme['grayscale-600']};
-
+  padding: 12px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const ValueContainer = styled.div`
+export const TopbarBase = styled.div`
+  display: flex;
+  gap: 4px;
+  align-items: center;
+`;
+
+export const TopbarContent = styled.div`
   display: flex;
   gap: 24px;
 `;
 
-export const ValueTextContainer = styled.div`
+export const TopbarGraphContent = styled.div`
   display: flex;
-  gap: 4px;
+  gap: 8px;
 `;
 
-export const AccessibilityContainer = styled.div`
+export const TopbarGraphValue = styled.div`
   display: flex;
   gap: 6px;
 `;
 
-export const IconsContainer = styled.div`
+export const TopbarAccessibilityContainer = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 12px;
+  align-items: center;
+`;
+
+export const LanguageContainer = styled.div`
+  display: flex;
+  margin-left: 32px;
+  gap: 6px;
+`;
+
+export const MenuContainer = styled.div`
+  width: 100%;
+  padding: 24px 75px;
+  background-color: ${(props) => props.theme['white']};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 1.813rem;
+    width: 7rem;
+  }
 `;

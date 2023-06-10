@@ -11,4 +11,5 @@ export const TextStyled = styled(({ tag, children, ...props }: HeadingProps) =>
   font-weight: ${(props) => props.weight};
   color: ${(props) => props.color};
   font-size: ${(props) => Sizes?.[props.size]};
+  text-decoration-line: ${(props) => props.textDecoration};
 `;
