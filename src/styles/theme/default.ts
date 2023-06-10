@@ -27,7 +27,7 @@ export const defaultTheme = {
   'system-blue': '#1A0DAB',
   'system-dark-blue': '#1B1466',
   'system-light-blue': '#2E82E5',
-  'system-red': '#1E986F',
+  'system-red': '#D23A20',
   'system-yellow': '#E5AC00',
   'system-green': '#1E986F',
 } as const;
