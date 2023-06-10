@@ -13,6 +13,6 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  body {
-    background-color: ${(props) => props.theme['system-dark-blue']};
+    background-color: ${(props) => props.theme['grayscale-800']};
  }
 `;

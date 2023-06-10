@@ -5,4 +5,5 @@ interface HeadingProps {
   tag: 'p' | 'span' | 'label';
   children: ReactNode;
   color: string;
+  weight: 'bold' | 'normal';
 }
