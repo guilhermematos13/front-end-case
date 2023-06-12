@@ -53,11 +53,12 @@ export const LockButton = styled.button`
 export const StoriesContent = styled.div``;
 
 export const StoriesButton = styled.button`
-  padding: 7px 12px;
+  padding: 4px 4px 4px 12px;
   border-radius: 24px;
   border: 2px solid ${(props) => props.theme['primary-500']};
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 16px;
   gap: 2px;
   cursor: pointer;

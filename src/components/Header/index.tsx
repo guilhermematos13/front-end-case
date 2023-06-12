@@ -16,7 +16,7 @@ import { Topbar } from '../Topbar';
 import { MenuButton } from '../MenuButton';
 import { LockKey, MagnifyingGlass } from '@phosphor-icons/react';
 import { Text } from '../Text';
-import storiesIcon from '../../assets/storieIcon.svg';
+import storiesIcon from '../../assets/storiesIcon.svg';
 
 export function Header() {
   const colors = useTheme();
