@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
 import Photo1 from '../assets/photo1.svg';
 import Photo2 from '../assets/photo2.svg';
 
 export interface CarouselDataProps {
   title: string;
   subtitle: string;
-  image: ReactNode;
+  image: any;
 }
 
 export const CarouselData: CarouselDataProps[] = [

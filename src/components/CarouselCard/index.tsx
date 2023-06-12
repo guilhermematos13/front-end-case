@@ -2,7 +2,6 @@ import { useTheme } from 'styled-components';
 import { Heading } from '../Heading';
 import { Text } from '../Text';
 import { Container, TextContainer } from './styles';
-import Image from '../../assets/photo1.svg';
 import { CarouselButton } from '../CarouselButton';
 
 interface CarouselCardProps {
