@@ -42,7 +42,7 @@ export const LockButton = styled.button`
   font-size: 16px;
 
   :hover {
-    border-bottom: 1px solid ${(props) => props.theme['grayscale-900']};
+    border-bottom: 1px solid ${(props) => props.theme['primary-500']};
   }
 
   svg {

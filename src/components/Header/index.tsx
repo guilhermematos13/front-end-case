@@ -30,11 +30,17 @@ export function Header() {
         </ImageContainer>
         <MenuContent>
           <MenuButtonContainer>
-            <MenuButton title="A Companhia" />
-            <MenuButton title="Governança" />
-            <MenuButton title="Informações aos Investidores" />
-            <MenuButton title="Informações Financeiras " />
-            <MenuButton title="Serviços RI" />
+            <MenuButton title="A Companhia" color={colors['grayscale-900']} />
+            <MenuButton title="Governança" color={colors['grayscale-900']} />
+            <MenuButton
+              title="Informações aos Investidores"
+              color={colors['grayscale-900']}
+            />
+            <MenuButton
+              title="Informações Financeiras"
+              color={colors['grayscale-900']}
+            />
+            <MenuButton title="Serviços RI" color={colors['grayscale-900']} />
           </MenuButtonContainer>
           <LoginContainer>
             <MagnifyingGlass color={colors['primary-500']} size={18} />
@@ -57,7 +63,7 @@ export function Header() {
               <Text
                 color={colors['grayscale-900']}
                 size="lg"
-                tag="p"
+                tag="span"
                 weight="bold"
               >
                 RI
