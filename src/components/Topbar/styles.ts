@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const TopbarContainer = styled.div`
+  background: ${(props) => props.theme['grayscale-900']};
   width: 100%;
   padding: 12px 72px;
   display: flex;

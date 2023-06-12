@@ -24,10 +24,11 @@ export const Container = styled.div`
   }
 
   .carousel .carousel-indicators {
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
     rotate: 90deg;
-    margin-left: 33%;
+    margin-bottom: 11%;
+    margin-left: 45%;
   }
 `;

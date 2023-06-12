@@ -1,14 +1,16 @@
 import { UncontrolledExample } from '../../components/Carousel';
-import { CarouselCard } from '../../components/CarouselCard';
+import { CenterResults } from '../../components/CenterResults';
 import { Footer } from '../../components/Footer';
-import { Container } from './styles';
+import { Container, GridContainer } from './styles';
 
 export function Home() {
   return (
     <div>
       <Container>
         <UncontrolledExample />
-        <h1>Home</h1>
+        <GridContainer>
+          <CenterResults />
+        </GridContainer>
       </Container>
       <Footer />
     </div>

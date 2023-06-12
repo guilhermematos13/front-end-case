@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  body {
-    background-color: ${(props) => props.theme['grayscale-800']};
+    background-color: ${(props) => props.theme['white']};
     
     p {
       margin-bottom: 0;
