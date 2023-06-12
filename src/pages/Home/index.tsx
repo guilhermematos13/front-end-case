@@ -1,3 +1,4 @@
+import { Calendar } from '../../components/Calendar ';
 import { UncontrolledExample } from '../../components/Carousel';
 import { CenterResults } from '../../components/CenterResults';
 import { Footer } from '../../components/Footer';
@@ -10,6 +11,7 @@ export function Home() {
         <UncontrolledExample />
         <GridContainer>
           <CenterResults />
+          <Calendar />
         </GridContainer>
       </Container>
       <Footer />
