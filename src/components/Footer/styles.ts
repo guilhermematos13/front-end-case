@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
+  margin-top: 50px;
   padding: 80px 72px 40px 72px;
   background-color: ${(props) => props.theme['grayscale-900']};
 `;
