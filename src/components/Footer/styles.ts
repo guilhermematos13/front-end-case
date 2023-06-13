@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin-top: 50px;
-  padding: 80px 72px 40px 72px;
+  margin-top: 3.125rem;
+  padding: 5rem 4.5rem 2.5rem 4.5rem;
   background-color: ${(props) => props.theme['grayscale-900']};
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
-  gap: 64px;
+  gap: 4rem;
   align-items: center;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid ${(props) => props.theme['grayscale-600']};
-  margin-bottom: 53px;
+  margin-bottom: 3.375rem;
 `;
 
 export const FooterContent = styled.div`
@@ -30,7 +30,7 @@ export const ButtonsContainer = styled.div`
 
 export const SocialMediaContainer = styled.div`
   display: flex;
-  gap: 13px;
+  gap: 0.875rem;
 `;
 
 export const CopyrightContainer = styled.div`

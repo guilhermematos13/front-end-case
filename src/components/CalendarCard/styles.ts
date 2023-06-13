@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
 `;
 
 export const ContentContainer = styled.div``;

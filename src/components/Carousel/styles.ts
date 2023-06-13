@@ -19,7 +19,7 @@ export const Container = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 48px;
+    gap: 3rem;
     text-align: left;
   }
 

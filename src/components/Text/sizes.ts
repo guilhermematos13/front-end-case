@@ -1,6 +1,6 @@
 export const Sizes = {
-  lg: '16px',
-  md: '14px',
-  sm: '12px',
-  xs: '10px',
+  lg: '1rem',
+  md: '0.875rem',
+  sm: '0.75rem',
+  xs: '0.625rem',
 };

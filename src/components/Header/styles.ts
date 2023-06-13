@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MenuContainer = styled.div`
   width: 100%;
-  padding: 24px 75px;
+  padding: 1.5rem 4.5rem;
   background-color: ${(props) => props.theme['white']};
 
   display: flex;
@@ -19,27 +19,27 @@ export const ImageContainer = styled.div`
 
 export const MenuContent = styled.div`
   display: flex;
-  gap: 32px;
+  gap: 2rem;
 `;
 
 export const MenuButtonContainer = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
 `;
 
 export const LoginContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
 `;
 
 export const LockButton = styled.button`
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   border: 1px solid transparent;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
 
   :hover {
     border-bottom: 1px solid ${(props) => props.theme['primary-500']};
@@ -53,13 +53,13 @@ export const LockButton = styled.button`
 export const StoriesContent = styled.div``;
 
 export const StoriesButton = styled.button`
-  padding: 4px 4px 4px 12px;
-  border-radius: 24px;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+  border-radius: 1.5rem;
   border: 2px solid ${(props) => props.theme['primary-500']};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1rem;
   gap: 2px;
   cursor: pointer;
 `;
@@ -70,6 +70,6 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
 `;

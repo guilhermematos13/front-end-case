@@ -4,14 +4,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 75px;
-  padding-right: 42px;
+  padding-left: 4.5rem;
+  padding-right: 2.5rem;
 `;
 
 export const CarouselContainer = styled.div`
-  margin-top: 24px;
+  margin-top: 1.5rem;
   display: flex;
-  gap: 32px;
+  gap: 2rem;
 
   svg {
     cursor: pointer;
@@ -21,8 +21,8 @@ export const CarouselContainer = styled.div`
 export const TextContainer = styled.div``;
 
 export const ItemsContainer = styled.div`
-  gap: 16px;
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 2.5rem;
   display: grid;
   grid-template-columns: auto auto auto;
 `;
