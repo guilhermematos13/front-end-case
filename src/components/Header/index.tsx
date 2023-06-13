@@ -17,8 +17,11 @@ import { MenuButton } from '../MenuButton';
 import { LockKey, MagnifyingGlass } from '@phosphor-icons/react';
 import { Text } from '../Text';
 import storiesIcon from '../../assets/storiesIcon.svg';
+import { MenuData } from '../../data/MenuData';
+import { useState } from 'react';
 
 export function Header() {
+  const [selectedMenu, setSelectedMenu] = useState('');
   const colors = useTheme();
 
   return (
@@ -30,17 +33,17 @@ export function Header() {
         </ImageContainer>
         <MenuContent>
           <MenuButtonContainer>
-            <MenuButton title="A Companhia" color={colors['grayscale-900']} />
-            <MenuButton title="Governança" color={colors['grayscale-900']} />
-            <MenuButton
-              title="Informações aos Investidores"
-              color={colors['grayscale-900']}
-            />
-            <MenuButton
-              title="Informações Financeiras"
-              color={colors['grayscale-900']}
-            />
-            <MenuButton title="Serviços RI" color={colors['grayscale-900']} />
+            {MenuData.map((title) => (
+              <MenuButton
+                title={title}
+                key={title}
+                color={colors['grayscale-900']}
+                onClick={() => {
+                  setSelectedMenu(title);
+                }}
+                isActive={title === selectedMenu ? 'true' : 'false'}
+              />
+            ))}
           </MenuButtonContainer>
           <LoginContainer>
             <MagnifyingGlass color={colors['primary-500']} size={18} />
