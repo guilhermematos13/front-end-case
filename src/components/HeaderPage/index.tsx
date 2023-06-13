@@ -16,6 +16,7 @@ import {
   LinkedinLogo,
   WhatsappLogo,
 } from '@phosphor-icons/react';
+import { useNavigate } from 'react-router-dom';
 
 interface HeaderPageProps {
   title: string;
@@ -24,6 +25,7 @@ interface HeaderPageProps {
 
 export function HeaderPage({ title, image }: HeaderPageProps) {
   const colors = useTheme();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -35,7 +37,14 @@ export function HeaderPage({ title, image }: HeaderPageProps) {
 
         <DetailsContainer>
           <InfoMenuContainer>
-            <House size={20} color={colors['grayscale-300']} />
+            <House
+              className="home"
+              size={20}
+              color={colors['grayscale-300']}
+              onClick={() => {
+                navigate('/');
+              }}
+            />
             <CaretRight size={20} color={colors['grayscale-300']} />
             <Text
               color={colors['grayscale-100']}

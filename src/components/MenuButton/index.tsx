@@ -1,14 +1,14 @@
-import { ButtonHTMLAttributes } from 'react';
 import { ButtonStyled } from './styles';
+import { MenuButtonProps } from './interface';
 
-interface MenuButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
-  color: string;
-}
-
-export function MenuButton({ title, color, ...props }: MenuButtonProps) {
+export function MenuButton({
+  title,
+  color,
+  isActive = 'false',
+  ...props
+}: MenuButtonProps) {
   return (
-    <ButtonStyled {...props} color={color}>
+    <ButtonStyled {...props} color={color} isActive={isActive}>
       {title}
     </ButtonStyled>
   );

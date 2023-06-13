@@ -17,8 +17,11 @@ import {
 } from '@phosphor-icons/react';
 import SeloFooter from '../../assets/seloFooter.svg';
 import { Text } from '../Text';
+import { MenuData } from '../../data/MenuData';
+import { useNavigate } from 'react-router-dom';
 
 export function Footer() {
+  const navigate = useNavigate();
   const colors = useTheme();
 
   return (
@@ -29,14 +32,15 @@ export function Footer() {
             <img src={LogoFooter} />
           </ImageContainer>
           <ButtonsContainer>
-            <MenuButton title="A Companhia" color={colors.white} />
-            <MenuButton title="Governança" color={colors.white} />
-            <MenuButton
-              title="Informações aos Investidores"
-              color={colors.white}
-            />
-            <MenuButton title="Informações Financeiras " color={colors.white} />
-            <MenuButton title="Serviços RI" color={colors.white} />
+            {MenuData.map((title) => (
+              <MenuButton
+                title={title.title}
+                color={colors.white}
+                onClick={() => {
+                  navigate(title.url);
+                }}
+              />
+            ))}
           </ButtonsContainer>
         </FooterContent>
         <SocialMediaContainer>

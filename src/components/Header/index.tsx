@@ -19,10 +19,12 @@ import { Text } from '../Text';
 import storiesIcon from '../../assets/storiesIcon.svg';
 import { MenuData } from '../../data/MenuData';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
   const [selectedMenu, setSelectedMenu] = useState('');
   const colors = useTheme();
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -35,13 +37,14 @@ export function Header() {
           <MenuButtonContainer>
             {MenuData.map((title) => (
               <MenuButton
-                title={title}
-                key={title}
+                title={title.title}
+                key={title.title}
                 color={colors['grayscale-900']}
                 onClick={() => {
-                  setSelectedMenu(title);
+                  setSelectedMenu(title.title);
+                  navigate(title.url);
                 }}
-                isActive={title === selectedMenu ? 'true' : 'false'}
+                isActive={title.title === selectedMenu ? 'true' : 'false'}
               />
             ))}
           </MenuButtonContainer>

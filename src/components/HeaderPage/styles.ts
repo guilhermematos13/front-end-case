@@ -41,6 +41,10 @@ export const DetailsContainer = styled.div`
 export const InfoMenuContainer = styled.div`
   display: flex;
   gap: 1rem;
+
+  .home {
+    cursor: pointer;
+  }
 `;
 
 export const IconsContainer = styled.div`
