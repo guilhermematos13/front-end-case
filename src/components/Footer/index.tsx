@@ -34,6 +34,7 @@ export function Footer() {
           <ButtonsContainer>
             {MenuData.map((title) => (
               <MenuButton
+                key={title.title}
                 title={title.title}
                 color={colors.white}
                 onClick={() => {
@@ -60,8 +61,7 @@ export function Footer() {
           Empresa &copy; Todos os direitos reservados 2023
         </Text>
         <Text size="md" tag="p" weight="normal" color={colors['grayscale-500']}>
-          Viverra faucibus amet sollicitudin | Viverra faucibus amet
-          sollicitudin
+          Viverra faucibus amet sollicitudin
         </Text>
         <img src={SeloFooter} />
       </CopyrightContainer>

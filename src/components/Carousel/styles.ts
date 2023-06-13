@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  .carousel {
-    img {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-      background-blend-mode: multiply;
-    }
-  }
   .carousel .carousel-control-prev {
     display: none;
   }
@@ -30,5 +24,11 @@ export const Container = styled.div`
     rotate: 90deg;
     margin-bottom: 11%;
     margin-left: 45%;
+
+    @media (max-width: 425px) {
+      width: 100%;
+      display: flex;
+      rotate: 0deg;
+    }
   }
 `;

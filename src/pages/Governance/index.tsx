@@ -10,7 +10,11 @@ export function Governance() {
   return (
     <div>
       <Container>
-        <HeaderPage image={GovernanceImage} title="Governança" />
+        <HeaderPage
+          image={GovernanceImage}
+          title="Governança"
+          navigation="Governança"
+        />
         <ContentContainer>
           <Heading color={colors['primary-500']} tag="h1" weight="normal">
             Governança

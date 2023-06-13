@@ -8,6 +8,10 @@ export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 425px) {
+    padding: 1rem 1.5rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -15,11 +19,26 @@ export const ImageContainer = styled.div`
     height: 1.813rem;
     width: 7rem;
   }
+
+  @media (max-width: 425px) {
+    img {
+      height: 1rem;
+      width: 4rem;
+    }
+  }
 `;
 
 export const MenuContent = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const MenuButtonContainer = styled.div`

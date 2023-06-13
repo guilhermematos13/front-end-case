@@ -13,16 +13,27 @@ export function TalkWithRI() {
     handleSubmit,
     formState: { errors },
     clearErrors,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      subject: '',
+      email: '',
+      name: '',
+    },
+  });
   const colors = useTheme();
+
+  const onSubmit = () => {
+    console.log('aqui');
+  };
 
   return (
     <Container>
       <Heading color={colors['primary-500']} tag="h1" weight="normal">
         Fale com RI
       </Heading>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <SelectTalkToRI
+          {...register('subject', { required: 'Campo Obrigatorio' })}
           options={OptionsSelectData}
           placeholder="Escolha o Assunto"
           title="Assunto"
@@ -35,7 +46,10 @@ export function TalkWithRI() {
         >
           Nome:
         </Text>
-        <Input placeholder="Ex: Maria Pereira" />
+        <Input
+          {...register('name', { required: 'Campo Obrigatorio' })}
+          placeholder="Ex: Maria Pereira"
+        />
         <Text
           tag="label"
           size="lg"
@@ -44,7 +58,11 @@ export function TalkWithRI() {
         >
           E-mail
         </Text>
-        <Input placeholder="Ex: maria@gmail.com" type="email" />
+        <Input
+          {...register('email', { required: 'Campo Obrigatorio' })}
+          placeholder="Ex: maria@gmail.com"
+          type="email"
+        />
 
         <button type="submit">Enviar</button>
       </form>

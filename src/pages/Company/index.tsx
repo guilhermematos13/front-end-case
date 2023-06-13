@@ -10,7 +10,11 @@ export function Company() {
   return (
     <div>
       <Container>
-        <HeaderPage image={CompanyImage} title="A Companhia" />
+        <HeaderPage
+          image={CompanyImage}
+          title="A Companhia"
+          navigation="A Companhia"
+        />
         <ContentContainer>
           <Heading color={colors['primary-500']} tag="h1" weight="normal">
             A Companhia

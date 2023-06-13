@@ -17,7 +17,7 @@ export function CarouselCard({ title, subtitle, image }: CarouselCardProps) {
     <Container>
       <img src={image} alt="" />
       <TextContainer>
-        <Heading color={colors.white} display="true" tag="h3" weight="bold">
+        <Heading color={colors.white} tag="h1" weight="bold">
           {title}
         </Heading>
         <Text color={colors['grayscale-300']} size="lg" tag="p" weight="normal">

@@ -11,6 +11,14 @@ export const Container = styled.div`
     height: 28.5rem;
     object-fit: cover;
   }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -31,6 +39,27 @@ export const TextContainer = styled.div`
     rgba(2, 0, 36, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+
+  @media (max-width: 425px) {
+    padding: 0rem 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0rem 4.5rem;
+  }
 `;
 
 export const DetailsContainer = styled.div`

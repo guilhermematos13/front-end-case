@@ -21,9 +21,10 @@ import { useNavigate } from 'react-router-dom';
 interface HeaderPageProps {
   title: string;
   image: any;
+  navigation: string;
 }
 
-export function HeaderPage({ title, image }: HeaderPageProps) {
+export function HeaderPage({ title, image, navigation }: HeaderPageProps) {
   const colors = useTheme();
   const navigate = useNavigate();
 
@@ -31,7 +32,7 @@ export function HeaderPage({ title, image }: HeaderPageProps) {
     <Container>
       <img src={image} alt="" />
       <TextContainer>
-        <Heading color={colors.white} display="true" tag="h3" weight="bold">
+        <Heading color={colors.white} tag="h1" weight="bold">
           {title}
         </Heading>
 
@@ -52,7 +53,7 @@ export function HeaderPage({ title, image }: HeaderPageProps) {
               weight="normal"
               size="lg"
             >
-              A Companhia
+              {navigation}
             </Text>
           </InfoMenuContainer>
           <IconsContainer>
