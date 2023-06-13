@@ -6,15 +6,10 @@ export function Heading({
   children,
   color,
   weight = 'normal',
-  isDisplay,
+  display = 'false',
 }: HeadingProps) {
   return (
-    <HeadingStyled
-      tag={tag}
-      color={color}
-      weight={weight}
-      isDisplay={isDisplay}
-    >
+    <HeadingStyled tag={tag} color={color} weight={weight} display={display}>
       {children}
     </HeadingStyled>
   );

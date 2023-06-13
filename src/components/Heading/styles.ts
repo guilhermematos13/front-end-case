@@ -11,5 +11,5 @@ export const HeadingStyled = styled(
   color: ${(props) => props.color};
   font-weight: ${(props) => props.weight};
   font-size: ${(props) =>
-    props.isDisplay ? '52px' : Sizes?.[props.tag] || '16px'};
+    props.display === 'true' ? '52px' : Sizes?.[props.tag] || '16px'};
 `;

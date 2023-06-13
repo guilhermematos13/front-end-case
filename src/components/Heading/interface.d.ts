@@ -5,5 +5,5 @@ interface HeadingProps {
   children: ReactNode;
   color: string;
   weight?: 'lighter' | 'normal' | 'bold';
-  isDisplay?: boolean;
+  display?: 'true' | 'false' | undefined;
 }

@@ -13,7 +13,7 @@ export function UncontrolledExample() {
       <Carousel>
         {CarouselData.map((carousel) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={carousel.id}>
               <CarouselCard
                 image={carousel.image}
                 title={carousel.title}
