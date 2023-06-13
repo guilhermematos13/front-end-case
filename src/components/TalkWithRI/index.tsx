@@ -4,24 +4,29 @@ import { Container } from './styles';
 import { SelectTalkToRI } from '../Select';
 import { Text } from '../Text';
 import { Input } from '../Input';
+import { useForm } from 'react-hook-form';
+import { OptionsSelectData } from '../../data/OptionsSelectData';
 
 export function TalkWithRI() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    clearErrors,
+  } = useForm();
   const colors = useTheme();
+
   return (
     <Container>
       <Heading color={colors['primary-500']} tag="h1" weight="normal">
         Fale com RI
       </Heading>
       <form>
-        <Text
-          tag="label"
-          size="lg"
-          color={colors['grayscale-900']}
-          weight="bold"
-        >
-          Assunto:
-        </Text>
-        <SelectTalkToRI />
+        <SelectTalkToRI
+          options={OptionsSelectData}
+          placeholder="Escolha o Assunto"
+          title="Assunto"
+        />
         <Text
           tag="label"
           size="lg"

@@ -1,16 +1,35 @@
-import { SelectStyled } from './styles';
+import { ForwardedRef, SelectHTMLAttributes } from 'react';
+import { Container, IconWrapper, Select, SelectTitle } from './styles';
+import { CaretDown } from '@phosphor-icons/react';
 
-export function SelectTalkToRI() {
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  placeholder: string;
+  options: { value: string; label: string }[];
+  title: string;
+}
+
+export function SelectTalkToRI(
+  { placeholder, title, options, ...props }: SelectProps,
+  ref: ForwardedRef<never>
+) {
   return (
-    <SelectStyled name="Assunto">
-      <option value="">Escolha o assunto</option>
-      <option value="Relações com Investidores">
-        Relações com Investidores
-      </option>
-      <option value="Informe de Rendimentos">Informe de Rendimentos</option>
-      <option value="Comunicação/Imprensa">Comunicação/Imprensa</option>
-      <option value="Sustentabilidade ESG">Sustentabilidade ESG</option>
-      <option value="Outros">Outros</option>
-    </SelectStyled>
+    <Container>
+      <SelectTitle>{title}</SelectTitle>
+      <div>
+        <Select placeholder={placeholder} {...props} {...ref}>
+          <option disabled selected value="">
+            {placeholder}
+          </option>
+          {options.map((option, index) => (
+            <option key={index} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </Select>
+        <IconWrapper>
+          <CaretDown size={32} />
+        </IconWrapper>
+      </div>
+    </Container>
   );
 }

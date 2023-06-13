@@ -5,4 +5,8 @@ export const InputStyled = styled.input`
   padding: 0.5rem;
   color: ${(props) => props.theme['grayscale-900']};
   border-radius: 0.5rem;
+
+  :focus {
+    border: 1px solid ${(props) => props.theme['primary-500']};
+  }
 `;
