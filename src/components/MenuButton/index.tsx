@@ -4,7 +4,7 @@ import { MenuButtonProps } from './interface';
 export function MenuButton({
   title,
   color,
-  isActive = 'false',
+  isActive = false,
   ...props
 }: MenuButtonProps) {
   return (

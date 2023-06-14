@@ -20,7 +20,7 @@ export function Menu({ selectedMenu, setSelectedMenu }: MenuProps) {
             setSelectedMenu(title.title);
             navigate(title.url);
           }}
-          isActive={title.title === selectedMenu ? 'true' : 'false'}
+          isActive={title.title === selectedMenu}
         />
       ))}
     </MenuButtonContainer>

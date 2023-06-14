@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { MenuButtonProps } from './interface';
 
-export const ButtonStyled = styled.button<MenuButtonProps>`
+export const ButtonStyled = styled.button<{ isActive: boolean }>`
   border: 1px solid transparent;
   width: auto;
   background-color: transparent;
   font-size: 1rem;
   color: ${(props) =>
-    props.isActive === 'true' ? props.theme['primary-500'] : props.color};
+    props.isActive ? props.theme['primary-500'] : props.color};
   cursor: pointer;
 
   :hover {
