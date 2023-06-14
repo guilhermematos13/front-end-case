@@ -1,4 +1,4 @@
-import { ForwardedRef, SelectHTMLAttributes } from 'react';
+import React, { ForwardedRef, SelectHTMLAttributes } from 'react';
 import { Container, IconWrapper, Select, SelectTitle } from './styles';
 import { CaretDown } from '@phosphor-icons/react';
 
@@ -8,16 +8,16 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   title: string;
 }
 
-export function SelectTalkToRI(
-  { placeholder, title, options, ...props }: SelectProps,
-  ref: ForwardedRef<never>
-) {
-  return (
+export const SelectTalkToRI = React.forwardRef(
+  (
+    { placeholder, title, options, ...props }: SelectProps,
+    ref: ForwardedRef<never>
+  ) => (
     <Container>
       <SelectTitle>{title}</SelectTitle>
       <div>
-        <Select placeholder={placeholder} {...props} {...ref}>
-          <option disabled selected value="">
+        <Select defaultValue="" placeholder={placeholder} {...props} {...ref}>
+          <option disabled value="">
             {placeholder}
           </option>
           {options.map((option, index) => (
@@ -31,5 +31,5 @@ export function SelectTalkToRI(
         </IconWrapper>
       </div>
     </Container>
-  );
-}
+  )
+);
