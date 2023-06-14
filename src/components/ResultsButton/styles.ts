@@ -11,6 +11,10 @@ export const ButtonStyled = styled.button`
   font-weight: bold;
   color: ${(props) => props.theme['grayscale-500']};
 
-  :hover {
+  @media (max-width: 425) {
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 `;

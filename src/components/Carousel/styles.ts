@@ -22,13 +22,34 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     rotate: 90deg;
-    margin-bottom: 11%;
+    margin-bottom: 15%;
     margin-left: 45%;
 
     @media (max-width: 425px) {
+      margin-left: 0;
+      margin-bottom: 5%;
+      rotate: 0deg;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 5%;
+      rotate: 0deg;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: 0;
+      margin-bottom: 5%;
+      rotate: 0deg;
+    }
+
+    @media (min-width: 1440px) {
+      height: auto;
       width: 100%;
       display: flex;
-      rotate: 0deg;
+      rotate: 90deg;
+      margin-bottom: 11%;
+      margin-left: 45%;
     }
   }
 `;

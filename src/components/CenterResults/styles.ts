@@ -6,6 +6,16 @@ export const Container = styled.div`
   align-items: center;
   padding-left: 4.5rem;
   padding-right: 2.5rem;
+
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
 `;
 
 export const CarouselContainer = styled.div`
@@ -25,4 +35,10 @@ export const ItemsContainer = styled.div`
   margin-top: 2.5rem;
   display: grid;
   grid-template-columns: auto auto auto;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;

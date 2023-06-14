@@ -11,4 +11,11 @@ export const Container = styled.div`
 export const ItemsContainer = styled.div`
   display: flex;
   gap: 10rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+  }
 `;
