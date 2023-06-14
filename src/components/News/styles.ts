@@ -12,7 +12,7 @@ export const ItemsContainer = styled.div`
   display: flex;
   gap: 10rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     flex-direction: column;
     align-items: center;
     gap: 5rem;

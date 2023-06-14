@@ -5,7 +5,6 @@ import {
   ImageContainer,
   LockButton,
   LoginContainer,
-  MenuButtonContainer,
   MenuContainer,
   MenuContent,
   StoriesButton,
@@ -13,18 +12,16 @@ import {
 } from './styles';
 
 import { Topbar } from '../Topbar';
-import { MenuButton } from '../MenuButton';
 import { LockKey, MagnifyingGlass } from '@phosphor-icons/react';
 import { Text } from '../Text';
 import storiesIcon from '../../assets/storiesIcon.svg';
-import { MenuData } from '../../data/MenuData';
+import { Menu } from '../Menu';
+import { MenuMobile } from '../MenuMobile';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export function Header() {
-  const [selectedMenu, setSelectedMenu] = useState('');
   const colors = useTheme();
-  const navigate = useNavigate();
+  const [selectedMenu, setSelectedMenu] = useState('');
 
   return (
     <div>
@@ -34,20 +31,7 @@ export function Header() {
           <img src={Logo} alt="" />
         </ImageContainer>
         <MenuContent>
-          <MenuButtonContainer>
-            {MenuData.map((title) => (
-              <MenuButton
-                title={title.title}
-                key={title.title}
-                color={colors['grayscale-900']}
-                onClick={() => {
-                  setSelectedMenu(title.title);
-                  navigate(title.url);
-                }}
-                isActive={title.title === selectedMenu ? 'true' : 'false'}
-              />
-            ))}
-          </MenuButtonContainer>
+          <Menu selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
           <LoginContainer>
             <MagnifyingGlass color={colors['primary-500']} size={18} />
             <Text
@@ -80,6 +64,10 @@ export function Header() {
             </StoriesButton>
           </StoriesContent>
         </MenuContent>
+        <MenuMobile
+          selectedMenu={selectedMenu}
+          setSelectedMenu={setSelectedMenu}
+        />
       </MenuContainer>
     </div>
   );

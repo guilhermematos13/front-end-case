@@ -3,6 +3,7 @@ import { MenuButtonProps } from './interface';
 
 export const ButtonStyled = styled.button<MenuButtonProps>`
   border: 1px solid transparent;
+  width: auto;
   background-color: transparent;
   font-size: 1rem;
   color: ${(props) =>

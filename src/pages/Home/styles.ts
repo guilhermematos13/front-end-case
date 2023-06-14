@@ -13,7 +13,7 @@ export const GridContainer = styled.div`
   grid-template-columns: auto auto;
   margin-top: 2rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     align-items: center;
     width: 100%;
     display: flex;

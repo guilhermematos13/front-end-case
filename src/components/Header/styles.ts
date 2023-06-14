@@ -41,11 +41,6 @@ export const MenuContent = styled.div`
   }
 `;
 
-export const MenuButtonContainer = styled.div`
-  display: flex;
-  gap: 1.5rem;
-`;
-
 export const LoginContainer = styled.div`
   display: flex;
   align-items: center;
