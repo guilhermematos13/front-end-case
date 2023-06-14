@@ -18,16 +18,18 @@ import storiesIcon from '../../assets/storiesIcon.svg';
 import { Menu } from '../Menu';
 import { MenuMobile } from '../MenuMobile';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
   const colors = useTheme();
   const [selectedMenu, setSelectedMenu] = useState('');
+  const navigate = useNavigate();
 
   return (
     <div>
       <Topbar />
       <MenuContainer>
-        <ImageContainer>
+        <ImageContainer onClick={() => navigate('/')}>
           <img src={Logo} alt="" />
         </ImageContainer>
         <MenuContent>

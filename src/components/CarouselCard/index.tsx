@@ -3,6 +3,7 @@ import { Heading } from '../Heading';
 import { Text } from '../Text';
 import { Container, TextContainer } from './styles';
 import { CarouselButton } from '../CarouselButton';
+import { useNavigate } from 'react-router-dom';
 
 interface CarouselCardProps {
   title: string;
@@ -12,6 +13,7 @@ interface CarouselCardProps {
 
 export function CarouselCard({ title, subtitle, image }: CarouselCardProps) {
   const colors = useTheme();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -23,7 +25,10 @@ export function CarouselCard({ title, subtitle, image }: CarouselCardProps) {
         <Text color={colors['grayscale-300']} size="lg" tag="p" weight="normal">
           {subtitle}
         </Text>
-        <CarouselButton title="Saiba mais" />
+        <CarouselButton
+          title="Saiba mais"
+          onClick={() => navigate('a-companhia')}
+        />
       </TextContainer>
     </Container>
   );

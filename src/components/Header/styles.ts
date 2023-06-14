@@ -14,7 +14,8 @@ export const MenuContainer = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.button`
+  border: 0;
   img {
     height: 1.813rem;
     width: 7rem;
